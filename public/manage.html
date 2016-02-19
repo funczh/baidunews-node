@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>百度新闻后台管理系统</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/manage.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h1>百度新闻管理系统</h1></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2 ">
+                <ul class="nav nav-pills nav-stacked news-nav" role="tablist">
+                    <li role="presentation" class="btn-welcome active"><a href="#">系统首页</a></li>
+                    <li role="presentation" class="btn-up"><a href="#">上传新闻</a></li>
+                    <li role="presentation" class="btn-manage"><a href="#">管理新闻</a></li>
+                </ul>
+            </div>
+            <!-- Tab Panes -->
+            <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
+                <div class="tab-content">
+                    <div class="tab-pane welcome active" role="tabpanel">
+                        <div class="jumbotron">
+                            <h2>欢迎进入百度新闻管理系统！</h2>
+                            <h4>在这个系统中，您可以：</h4>
+                            <h5>1、上传新闻；</h5>
+                            <h5>2、对已经储存在系统中的新闻进行修改，删除操作。</h5>
+                            
+                        </div>
+                    </div>
+                    <!-- 上传新闻 -->
+                    <div class="tab-pane up-news" role="tabpanel">
+                        <form action="/uploadnews" method="post" class="news-content">
+                            <div class="form-group">
+                                <label for="newstitle">新闻标题：</label>
+                                <input type="text" class="form-control" id="newstitle" name="newstitle" required="required" placeholder="输入新闻标题">
+                            </div>
+                            <div class="form-group">
+                                <label for="newstype">新闻类型：</label>
+                                <select value="——选择新闻类型——" class="form-control" name="newstype" id="newstype">
+                                    <option value="families">百家</option>
+                                    <option value="local">本地</option>
+                                    <option value="entertain">娱乐</option>
+                                    <option value="social">社会</option>
+                                    <option value="recommend">推荐</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="newsimg">新闻图片地址：</label>
+                                <input type="text" required="required" class="form-control" id="newsimg" name="newsimg" placeholder="输入新闻图片地址">
+                            </div>
+                            <div class="form-group">
+                                <label for="newslink">新闻来源链接：</label>
+                                <input type="text" required="required" class="form-control" id="newslink" name="newslink" placeholder="输入新闻来源链接">
+                            </div>
+                            <div class="form-group">
+                                <label for="addtime">添加时间：</label>
+                                <input type="date" id="addtime" name="addtime" placeholder="如：2016-01-31">
+                            </div>
+                            <div class="form-group">
+                                <label for="newscontent">新闻正文：</label>
+                                <textarea class="form-control" name="newscontent" cols="132" rows="10" id="newscontent" placeholder="输入新闻内容"></textarea>
+                            </div>
+                            <input type="submit" class="news-submit btn btn-default btn-success" value="确认提交">
+                            <button type="reset" class=" btn btn-danger">清除</button>
+                        </form>
+                    </div>
+                    <!-- 管理新闻 -->
+                    <div class=" tab-pane manage-news" role="tabpanel">
+                        <ul class="list-group">
+                        </ul>
+                    </div>
+                    <!-- 修改新闻的模态框 -->
+                    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="update-news">
+                                    <form action="/updatedatabase" method="post" class="update-content">
+                                        <div class="form-group hide">
+                                            <input type="text" id="updateid" name="updateid" required="required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="updatetitle">新闻标题：</label>
+                                            <input type="text" class="form-control" id="updatetitle" name="updatetitle" required="required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="updatetype">新闻类型：</label>
+                                            <select value="——选择新闻类型——" class="form-control" name="updatetype" id="updatetype">
+                                                <option value="test">测试</option>
+                                                <option value="families">百家</option>
+                                                <option value="local">本地</option>
+                                                <option value="entertain">娱乐</option>
+                                                <option value="social">社会</option>
+                                                <option value="recommend">推荐</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="uptadeimg">新闻图片地址：</label>
+                                            <input type="text" required="required" class="form-control" id="updateimg" name="updateimg">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="updatelink">新闻来源链接：</label>
+                                            <input type="text" required="required" class="form-control" id="updatelink" name="updatelink">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="updateaddtime">添加时间：</label>
+                                            <input type="date" id="updateaddtime" name="updateaddtime">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="updatecontent">新闻正文：</label>
+                                            <textarea class="form-control" name="updatecontent" cols="132" rows="10" id="updatecontent"></textarea>
+                                        </div>
+                                        <input type="submit" class="news-update btn btn-default btn-success" value="确认修改">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/manage.js"></script>
+    <script type="text/javascript" src="./js/jquery.form.js"></script>
+</body>
+
+</html>

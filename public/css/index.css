@@ -1,0 +1,182 @@
+/*页面顶部工具栏样式*/
+
+.header {
+    min-width: 320px;
+    height: 44px;
+    background-color: #3E98F0;
+    color: #fff;
+    position: relative;
+    background-image: url(../img/bd-news-logo.png);
+    background-position: center 6px;
+    background-size: 77px auto;
+    background-repeat: no-repeat;
+}
+
+
+/*工具栏icon样式*/
+
+.toolbar {
+    width: 34px;
+    height: 100%;
+    line-height: 44px;
+    background-image: url(../img/tool-bar.png);
+    background-size: 40px 500px;
+    background-repeat: none;
+    float: left;
+}
+
+.tool-bd-logo {
+    background-position: center 4px;
+}
+
+.tool-user {
+    background-position: center -463px;
+    margin-left: 10px;
+}
+
+.tool-sc {
+    background-position: center -162px;
+    float: right;
+}
+
+.tool-add {
+    background-position: center -107px;
+    float: right;
+    margin-right: 10px;
+}
+
+
+/*新闻导航栏样式*/
+
+.nav {
+    min-width: 320px;
+    height: 33px;
+    border-top: 2px solid #5FABF0;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    background-color: #3E98F0;
+}
+
+.nav-item li {
+    float: left;
+    width: 20%;
+    text-align: center;
+    height: 100%;
+    line-height: 33px;
+    color: #fff;
+}
+
+.nav-item li span {
+    font-size: 16px;
+    line-height: 22px;
+    height: 22px;
+}
+.underline{
+    border-bottom: 2px solid #fff;
+}
+.nav-item:hover {
+    background-color: #5FABF0;
+}
+
+
+/*滚动焦点图样式*/
+
+.artical {
+    min-width: 320px;
+    position: relative;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.banner {
+    width: 100%;
+}
+
+.banner img {
+    width: 100%;
+    height: inherit;
+    min-height: 187px;
+    vertical-align: middle;
+}
+
+.swiper-pagination span {
+    height: 3px;
+    width: 25%;
+    bottom: 0px;
+}
+
+.swiper-slide h2,
+.h2-bg {
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: lighter;
+    padding-left: 8px;
+    position: absolute;
+    color: #fff;
+    bottom: 3px
+}
+
+.h2-bg {
+    opacity: .7;
+    background-color: #333;
+}
+
+
+/*新闻信息流样式*/
+
+.news {
+    margin-top: 10px;
+}
+
+.news-box {
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid #f6f6f6;
+    overflow: hidden;
+    padding: 10px 0;
+    margin: 0 10px;
+    position: relative;
+}
+
+.newsimg {
+    width: 95px;
+    height: 68px;
+    float: left;
+    margin-right: 10px;
+}
+
+.newsimg img {
+    width: 100%;
+    height: 100%;
+}
+
+.newscontent h2 {
+    font-size: 16px;
+    line-height: 20px;
+    color: #262b31;
+    margin: -1px 0 4px 0;
+}
+.newscontent span{
+	font-size: 10px;
+	color: #b8bac0;
+	position: absolute;
+	bottom: 10px;
+}
+
+.hide{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+

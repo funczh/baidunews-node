@@ -1,0 +1,24 @@
+.list-group-item span{
+	position: absolute;
+    right: 150px;
+    color: #ccc;
+}
+.btn-update,.btn-delete{
+	position: absolute;
+	right: 80px;
+	top:3px;
+}
+.btn-delete{
+	right: 10px;
+}
+.news-nav li{
+	border: 1px solid #337ab7;
+	border-radius: 6px;
+	text-align: center;
+}
+.update-news{
+	padding: 20px 20px;
+}
+.hide{
+	display: none;
+}
